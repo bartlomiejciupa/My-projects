@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #44c4e7;
+  background-image: linear-gradient(to bottom right, #44c4e7, #1e0ddf);
+  color: #fff;
+  font-family: "Quicksand", "Montserrat", sans-serif;
+  line-height: 1.5;
+  text-shadow: 0 3px 5px rgb(0 0 0 / 10%);
+}
+
+body::before {
+  background-image: url("images/bernd-dittrich-bHL4mk9gRdY-unsplashma.jpg");
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-size: cover;
+  content: "";
+  position: fixed;
+  opacity: 0.2;
+}
+
+/*Formatowanie dla pionowego ustawienia wersji mobilnej  */
+.container {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/*Formatowanie dla poziomego ustawienia wersji mobilnej i PC */
+@media screen and (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.wraper-photo {
+  text-align: center;
+}
+
+/*Formatowanie dla poziomego ustawienia wersji mobilnej i PC */
+@media screen and (min-width: 1024px) {
+  .wraper-photo {
+    order: 1;
+  }
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 7px 7px 20px rgb(0 0 0/ 50%);
+}
+
+/*Formatowanie dla poziomego ustawienia wersji mobilnej i PC */
+@media screen and (min-width: 1024px) {
+  .photo {
+    width: 350px;
+    height: 350px;
+    background-color: #44c4e7;
+  }
+}
+
+.content {
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .content {
+    text-align: left;
+  }
+}
+
+hr {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 30px auto;
+  height: 1px;
+  width: 40%;
+  background-color: rgb(255, 71, 15);
+  border: none;
+}
+
+@media screen and (min-width: 1024px) {
+  hr {
+    text-align: left;
+    margin: 10px 0 20px 0;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.content > p {
+  color: #fd4;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.85rem;
+}
+
+.about {
+  font-size: 1.5rem;
+}
+
+.contact {
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-block;
+  box-shadow: 7px 7px 20px rgb(0 0 0/ 50%);
+  border-radius: 100px;
+  color: rgb(22 78 100);
+  background-color: #fff;
+  padding: 15px 30px;
+  transform-origin: 0 0;
+  transform: scale(1);
+  transition: background-color 0.4s ease, transform 0.4s ease,
+    color 0.4s ease-out;
+  will-change: background-color, transform, color;
+}
+
+@media screen and (min-width: 1024px) {
+  .button:hover {
+    background-color: #5595af;
+    color: #000;
+    transform: scale(1.05);
+  }
+}
+.socials {
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .socials {
+    justify-content: inherit;
+  }
+}
+
+@font-face {
+  font-family: "fontello";
+  src: url("fontello/font/fontello.eot") format("embedded-opentype"),
+    url("fontello/font/fontello.woff") format("woff"),
+    url("fontello/font/fontello.ttf") format("truetype"),
+    url("fontello/font/fontello.svg") format("svg");
+}
+
+.icon-github-circled-alt2:before {
+  content: "\f056";
+  width: 35px;
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook-squared:before {
+  content: "\f308";
+}
+
+.icon {
+  font-style: normal;
+  letter-spacing: 20px;
+  font-family: "fontello";
+  font-size: 2rem;
+  width: 100%;
+  opacity: 50%;
+  transform-origin: 0 0;
+  transform: scale(1);
+  transition: background-color 0.4s ease, transform 0.4s ease,
+    color 0.4s;
+  will-change: background-color, transform, color;
+}
+
+@media screen and (min-width: 1024px) {
+  .icon:hover {
+    transform: scale(1.5);
+  }
+}
