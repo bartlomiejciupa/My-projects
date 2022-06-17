@@ -170,21 +170,20 @@ a {
 }
 
 .icon-github-circled-alt2:before {
-  content: '\f056';
-  width: 35px;
+  content: '\e802';
 }
 .icon-twitter:before {
-  content: '\f099';
+  content: '\e801';
 }
-.icon-facebook-squared:before {
-  content: '\f308';
+.icon-linkedin-circled:before {
+  content: '\e803';
 }
 
 .icon {
   font-style: normal;
   letter-spacing: 20px;
   font-family: 'fontello';
-  font-size: 2rem;
+  font-size: 3rem;
   width: 100%;
   opacity: 50%;
   transform-origin: 0 0;
