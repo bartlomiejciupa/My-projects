@@ -95,12 +95,19 @@ hr {
   width: 40%;
   background-color: rgb(255, 71, 15);
   border: none;
+  transform-origin: 0 0;
+  transform: scale(1);
+  transition: transform 0.4s ease, 0.4s ease-out;
+  will-change: transform;
 }
 
 @media screen and (min-width: 1024px) {
   hr {
     text-align: left;
     margin: 10px 0 20px 0;
+  }
+  hr:hover {
+    transform: scale(2.5);
   }
 }
 
